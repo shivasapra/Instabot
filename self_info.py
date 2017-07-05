@@ -4,7 +4,7 @@ import requests
 
 # a function to get own info
 def self_info():
-    request_url = BASE_URL + 'users/self/?access_token=%s' % Access_Token
+    request_url = BASE_URL + 'users/self/?access_token=' + Access_Token
     print 'GET request url : %s' % request_url
     user_info = requests.get(request_url).json()
     if user_info['meta']['code'] == 200:
