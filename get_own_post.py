@@ -1,5 +1,6 @@
 from constants import Access_Token, BASE_URL
 import requests
+import urllib
 
 
 #function is defined to get own post
@@ -9,9 +10,11 @@ def get_own_post():
     own_media = requests.get(request_url).json()
     if own_media['meta']['code'] == 200:
         if len(own_media['meta']['data'])> 0:
-            return own_media['data'][0]['id']
+            image_name = own_media['data'][0]['id'] + '.jpeg'
+            image_url = own_media['data'][0]['images']['standard_resolution']['url']
+            urllib.urlretrieve(image_url,image_name)
+            print 'your image has been downloaded'
         else:
             print 'post does not exist'
     else:
         print "request not completed"
-    return None
