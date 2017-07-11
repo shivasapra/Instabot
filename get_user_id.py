@@ -11,7 +11,7 @@ def get_user_id(insta_username):
         if len(user_info['data']) > 0:
             return user_info['data'][0]['id']
         else:
-            return None
+            print 'user does not exist'
     else:
         print 'request not completed'
         exit()
