@@ -7,19 +7,19 @@ from post_a_comment import post_a_comment
 
 print 'welcome!!!!'
 print 'what do you want to do'
-print "\n1. Get your own info" \
-      "\n2. Download your own post" \
-      "\n3. Get information of any user" \
-      "\n4. Get user's recent post" \
-      "\n5. like user's recent media" \
-      "\n6. post a comment on user's post" \
-      "\n7. close application"
-choice = raw_input('ENTER YOUR CHOICE')
 
 temp = 1
 while temp:
+    choice = int(raw_input("\n1. Get your own info"
+                           "\n2. Download your own post" 
+                           "\n3. Get information of any user" 
+                           "\n4. Get user's recent post" 
+                           "\n5. like user's recent media" 
+                           "\n6. post a comment on user's post" 
+                           "\n7. close application"))
+
     if choice == 1:
-        self_info()
+        a = self_info()
     elif choice == 2:
         get_own_post()
     elif choice == 3:
