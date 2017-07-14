@@ -20,4 +20,4 @@ def list_of_comments():
             print a + "\n"
     else:
         print 'request not completed'
-list_of_comments()
+#list_of_comments()

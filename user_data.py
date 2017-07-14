@@ -9,7 +9,7 @@ from post_a_comment import post_a_comment
 def user_data():
     username = raw_input('please enter username')
     while 1:
-        print 'what do you want to do'
+        print '\nwhat do you want to do\n'
         print 'enter 1 to get user information'
         print 'enter 2 to get user id '
         print 'enter 3 to get user\'s post id'
@@ -17,14 +17,16 @@ def user_data():
         print 'enter 5 to like user\'s recent post'
         print 'enter 6 to post a comment on user\'s recent media'
         print 'enter 7 to close application'
-        choice = raw_input('please enter')
+        choice = int(raw_input('please enter'))
 
         if choice == 1:
             user_info(username)
         elif choice == 2:
-            get_user_id(username)
+            id = get_user_id(username)
+            print id
         elif choice == 3:
-            get_post_id(username)
+            id = get_post_id(username)
+            print id
         elif choice == 4:
             get_users_post(username)
         elif choice == 5:
