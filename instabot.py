@@ -6,36 +6,20 @@ from like_user_post import like_user_post
 from post_a_comment import post_a_comment
 
 print 'welcome!!!!'
+
+
+
 print 'what do you want to do'
-
-temp = 1
-while temp:
-    choice = int(raw_input("\n1. Get your own info"
-                           "\n2. Download your own post" 
-                           "\n3. Get information of any user" 
-                           "\n4. Get user's recent post" 
-                           "\n5. like user's recent media" 
-                           "\n6. post a comment on user's post" 
-                           "\n7. close application"))
-
+while 1:
+    print '1. get own data'
+    print "2. get other user's data"
+    print '3. close application'
+    choice = raw_input('\nenter your choice')
     if choice == 1:
-        a = self_info()
+        own_data()
     elif choice == 2:
-        get_own_post()
+        user_data()
     elif choice == 3:
-        username = raw_input("enter user's username")
-        user_info(username)
-    elif choice == 4:
-        username = raw_input("enter user's username")
-        get_users_post(username)
-    elif choice == 5:
-        username = raw_input("enter user's username")
-        like_user_post(username)
-    elif choice == 6:
-        username = raw_input("enter user's username")
-        post_a_comment(username)
-    elif choice == 7:
-        temp = 0
-    else:
-        print 'invalid choice please try again'
         exit()
+    else:
+        print 'enter correctly'
