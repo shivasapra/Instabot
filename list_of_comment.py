@@ -3,13 +3,13 @@ import requests
 # importing constants
 from constants import BASE_URL, Access_Token
 # importing a function from a file
-from get_own_post import get_own_post
+from get_post_id import get_post_id
 comment = []   # a list to store comments
 
 
 # function is defined to like a recent post of a user
-def list_of_comments():
-    media_id = get_own_post()
+def list_of_comments(username):
+    media_id = get_post_id(username)
     request_url = BASE_URL + 'media/%s/comments?access_token=%s' % (media_id,Access_Token)
     print '\nGET request_url : ' + request_url
     list_of_comment = requests.get(request_url).json()     # get request to get json object

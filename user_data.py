@@ -5,7 +5,7 @@ from get_post_id import get_post_id
 from get_users_post import get_users_post
 from like_user_post import like_user_post
 from post_a_comment import post_a_comment
-
+from list_of_comment import list_of_comments
 
 def user_data():
     username = raw_input('\nplease enter username')
@@ -17,7 +17,8 @@ def user_data():
         print 'enter 4 to get user\'s post'
         print 'enter 5 to like user\'s recent post'
         print 'enter 6 to post a comment on user\'s recent media'
-        print 'enter 7 to close application'
+        print 'enter 7 to get list of comment on your recent post'
+        print 'enter 8 to close application'
         choice = int(raw_input('\nplease enter'))
 
         if choice == 1:
@@ -35,6 +36,8 @@ def user_data():
         elif choice == 6:
             post_a_comment(username)
         elif choice == 7:
+            list_of_comments(username)
+        elif choice == 8:
             exit()
         else:
             print '\n*************************' \
