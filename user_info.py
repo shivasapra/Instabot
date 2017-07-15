@@ -1,5 +1,8 @@
+# importing constants
 from constants import Access_Token, BASE_URL
+# importing library
 import requests
+# importing a function from a file
 from get_user_id import get_user_id
 
 
@@ -10,15 +13,15 @@ def user_info(insta_username):
         print 'user does not exist'
         exit()
     request_url = BASE_URL + 'users/%s?access_token=%s' % (user_id, Access_Token)
-    print 'GET request_url : ' + request_url
-    user_info = requests.get(request_url).json()
+    print '\nGET request_url : ' + request_url
+    user_info = requests.get(request_url).json()            # get request to get json object
     if user_info['meta']['code'] == 200:
         if len(user_info['data']) > 0:
-            print 'username : ' + user_info['data']['username']
-            print 'no. of followers : ' + user_info['data']['counts']['followed_by']
+            print '\nusername : ' + user_info['data']['username']
+            print 'no. of followers : ' + user_info['data']['counts']['followed_by']        # printing user details
             print 'no. of followings : ' + user_info['data']['counts']['follows']
             print 'no. of posts : ' + user_info['data']['counts']['media']
         else:
-            print 'No data for this user'
+            print '\nNo data for this user'
     else:
-        print 'request not completed'
+        print 'code other than 200'

@@ -1,3 +1,4 @@
+# importing functions from another files
 from user_info import user_info
 from get_user_id import get_user_id
 from get_post_id import get_post_id
@@ -7,7 +8,7 @@ from post_a_comment import post_a_comment
 
 
 def user_data():
-    username = raw_input('please enter username')
+    username = raw_input('\nplease enter username')
     while 1:
         print '\nwhat do you want to do\n'
         print 'enter 1 to get user information'
@@ -17,7 +18,7 @@ def user_data():
         print 'enter 5 to like user\'s recent post'
         print 'enter 6 to post a comment on user\'s recent media'
         print 'enter 7 to close application'
-        choice = int(raw_input('please enter'))
+        choice = int(raw_input('\nplease enter'))
 
         if choice == 1:
             user_info(username)
@@ -36,4 +37,6 @@ def user_data():
         elif choice == 7:
             exit()
         else:
-            print 'please enter valid option'
+            print '\n*************************' \
+                  '\nplease enter valid option' \
+                  '\n*************************'

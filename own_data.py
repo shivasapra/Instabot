@@ -1,3 +1,4 @@
+# importing functions from another files
 from self_info import self_info
 from get_own_post import get_own_post
 from list_of_comment import list_of_comments
@@ -12,7 +13,7 @@ def own_data():
         print 'enter 3 to get list of comment on your recent post'
         print 'enter 4 to get recent media you liked'
         print 'enter 5 to close application'
-        choice = int(raw_input('please enter'))
+        choice = int(raw_input('\nplease enter'))
 
         if choice == 1:
             self_info()
@@ -25,4 +26,6 @@ def own_data():
         elif choice == 5:
             exit()
         else:
-            print 'please enter valid option'
+            print '\n*************************' \
+                  '\nplease enter valid option' \
+                  '\n*************************'

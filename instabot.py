@@ -1,5 +1,9 @@
+# importing functions from another file
 from own_data import own_data
 from user_data import user_data
+
+
+# program starts
 print 'welcome!!!!'
 while 1:
     print '\nwhat do you want to do\n'
@@ -14,4 +18,7 @@ while 1:
     elif choice == 3:
         exit()
     else:
-        print 'enter correctly'
+        print '\n***************' \
+              '\nenter correctly' \
+              '\n***************'
+# program ends :) :) :)

@@ -1,5 +1,8 @@
+# importing constants
 from constants import Access_Token, BASE_URL
+# importing library
 import requests
+# importing a function from a file
 from get_user_id import get_user_id
 
 
@@ -10,12 +13,12 @@ def get_post_id(insta_username):
         print 'user does not exist'
         exit()
     request_url = BASE_URL + 'users/%s/media/recent/?access_token=%s' % (user_id, Access_Token)
-    print 'GET request_url : ' + request_url
-    user_media = requests.get(request_url).json()
+    print '\nGET request_url : ' + request_url
+    user_media = requests.get(request_url).json()     # get request to get json object
     if user_media['meta']['code'] == 200:
         if len(user_media['data']) > 0:
             return user_media
         else:
-            print 'there is no recent post'
+            print '\nthere is no recent post'
     else:
-        print 'request not completed'
+        print '\ncode other than 200'
